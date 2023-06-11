@@ -1,81 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
-    <style>
-      .container {
-        margin: 20px auto;
-        max-width: 650px;
-        background-color: #ffebbb;
-        border-radius: 20px;
-        padding: 20px 20px 60px 20px;
-      }
-      .info {
-        text-align: left;
-        padding: 10px 20px 10px;
-        border: none;
-        border-radius: 20px;
-        color: white;
-        background-color: #ffcab0;
-      }
-      .temp {
-        display: flex;
-        font-size: 30px;
-        margin: -30px 0px 0px 0px;
-      }
-      .time {
-        display: block;
-        font-size: 12px;
-        margin: -40px 0px -10px 0px;
-      }
-      h1 {
-        display: inline;
-        font-size: 35px;
-        text-align: left;
-        margin-left: 5px;
-      }
-      h2 {
-        display: inline;
-        font-size: 15px;
-        text-align: right;
-        padding: 0px 0px 0px 0px;
-      }
-      input[type="text"] {
-        border: none;
-        padding: 5px;
-      }
-      input[type="submit"] {
-        color: black;
-        background-color: #e0ffcd;
-        border-radius: 20%;
-        border: solid thin;
-        border-color: #c6e0b5;
-        padding: 5px;
-      }
-      form {
-        margin: -35px 5px 20px 0px;
-      }
-      ul {
-        text-align: center;
-        margin: 50px 0px 0px -40px;
-        font-size: 20px;
-      }
-      li {
-        display: inline;
-        padding: 0px 10px 0px;
-      }
-      body {
-        background-color: #fdffcd;
-      }
-      footer {
-        text-align: center;
-        font-size: 12px;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" rel="stylesheet" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
+
   <body>
     <div class="container">
       <h1>Aiken</h1>
@@ -112,36 +43,9 @@
         <li>⛈️Sat</li>
       </ul>
     </div>
-    <script>
-      function search(event) {
-        event.preventDefault();
-        let searchInput = document.querySelector("#search-text-input");
-        let h1 = document.querySelector("h1");
-        h1.innerHTML = searchInput.value;
-      }
-      let form = document.querySelector("#search-form");
 
-      form.addEventListener("submit", search);
-
-      let now = new Date();
-      let h4 = document.querySelector("h4");
-      let date = now.getDate();
-      let hour = now.getHours();
-      let minutes = now.getMinutes();
-      let days = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-      ];
-      let day = days[now.getDay()];
-      h4.innerHTML = day + " " + hour + ":" + minutes;
-    </script>
+    <script src="script.js"></script>
   </body>
-
   <footer>
     Coded by
     <a href="https://www.linkedin.com/in/brooklyn-van-bebber-6bb8a9242/"
